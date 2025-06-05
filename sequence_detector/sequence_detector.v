@@ -33,7 +33,7 @@ module sequence_detector (
     end
 
     // Output logic (Moore FSM)
-    always @(*) begin
+    always @(posedge clk) begin
         if (state == S3 && x == 1)
             y = 1;
         else
